@@ -24,12 +24,42 @@ body, html {height: 100%}
   <div class="w3-display-middle">
     <h1 class="w3-jumbo w3-animate-top">COMING SOON</h1>
     <hr class="w3-border-grey" style="margin:auto;width:40%">
-    <p class="w3-large w3-center">Only days left</p>
+    <p class="w3-large w3-center">Days left <br><span id="demo"></span></p>
   </div>
   <div class="w3-display-bottomleft w3-padding-large">
     Contact Me <a href="https://www.twitter.com/stanleyloren" target="_blank">Stanley Masinde</a>
   </div>
 </div>
-
+<script>
+  // Set the date we're counting down to
+  var countDownDate = new Date("Dec 15, 2015 15:37:25").getTime();
+  
+  // Update the count down every 1 second
+  var x = setInterval(function() {
+  
+      // Get todays date and time
+      var now = new Date().getTime();
+      
+      // Find the distance between now and the count down date
+      var distance = countDownDate - now;
+      
+      // Time calculations for days, hours, minutes and seconds
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      
+      // Output the result in an element with id="demo"
+      document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+      + minutes + "m " + seconds + "s ";
+      
+      // If the count down is over, write some text 
+      if (distance < 0) {
+          clearInterval(x);
+          document.getElementById("demo").innerHTML = "EXPIRED";
+      }
+  }, 1000);
+  </script>
+  
 </body>
 </html>
