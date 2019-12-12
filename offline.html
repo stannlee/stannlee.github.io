@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>No Internet 😢</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type="text/css">
+        body {
+            text-align: center;
+            padding: 10%;
+            font: 20px Helvetica, sans-serif;
+            color: #333;
+        }
+
+        h1 {
+            font-size: 50px;
+            margin: 0;
+        }
+
+        article {
+            display: block;
+            text-align: left;
+            max-width: 650px;
+            margin: 0 auto;
+        }
+
+        a {
+            color: #dc8100;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #333;
+            text-decoration: none;
+        }
+
+        @media only screen and (max-width : 480px) {
+            h1 {
+                font-size: 40px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <article>
+        <h1>You are offline 😢</h1>
+        <p>We are not able to connect to our servers at the moment please check your internet connection</p>
+        <p>Good new is that, tou can view the pages you had already loaded</p>
+        <p>I will keep retrying to connect</p>
+        <p id="signature">&mdash; <a href="mailto:stanleyloren@gmail.com">Stanley Masinde</a></p>
+        <p id="signature">Twitter <a href="http://twitter.com/StanleyMasinde_">Stanley Masinde</a></p>
+        <p id="signature">TEL: <a href="tel:+254706394137">+25470639413</a></p>
+    </article>
+</body>
+
+<script>
+    window.addEventListener('online', function () {
+        location.reload(true);
+    })
+</script>
+
+</html>
