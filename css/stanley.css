@@ -1,0 +1,97 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  height: 100vh;
+}
+
+body a {
+  color: teal;
+  text-decoration: none;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+body a:hover {
+  color: green;
+  text-decoration: underline;
+}
+
+body code {
+  color: hotpink;
+}
+
+div.card {
+  -webkit-box-shadow: -1px 1px 6px gray;
+          box-shadow: -1px 1px 6px gray;
+  border-radius: 5px;
+}
+
+div.card > div.card-body {
+  padding: 5px;
+}
+
+div.container {
+  overflow-y: hidden;
+}
+
+div.container > div.row {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+div.container > div.row > div {
+  -webkit-transition: .7s;
+  transition: .7s;
+}
+
+@media screen and (max-width: 600px) {
+  div.container > div.row > div {
+    margin: 8px;
+    padding: 5px;
+    width: 300px;
+  }
+}
+
+@media screen and (min-width: 601px) {
+  div.container > div.row > div {
+    margin: 8px;
+    padding: 5px;
+    width: 45%;
+    float: right;
+  }
+}
+
+div.container > div.row > div:hover {
+  background-color: teal;
+  color: white;
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+  -webkit-transform: rotate(-10deg);
+          transform: rotate(-10deg);
+  position: relative;
+  -webkit-animation: 2s linear 1s infinite alternate bounce;
+          animation: 2s linear 1s infinite alternate bounce;
+}
+
+@-webkit-keyframes bounce {
+  0% {
+    -webkit-box-shadow: -1px 1px 6px teal;
+            box-shadow: -1px 1px 6px teal;
+  }
+  100% {
+    -webkit-box-shadow: -3px 7px 12px teal;
+            box-shadow: -3px 7px 12px teal;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    -webkit-box-shadow: -1px 1px 6px teal;
+            box-shadow: -1px 1px 6px teal;
+  }
+  100% {
+    -webkit-box-shadow: -3px 7px 12px teal;
+            box-shadow: -3px 7px 12px teal;
+  }
+}
+/*# sourceMappingURL=stanley.css.map */
